@@ -37,9 +37,14 @@ const tweetsArray = [
 function App() {
   return (
     <div className='App'>
-      <Tweet />
+
+{ tweetsArray.map ( element => {
+      return <Tweet key={element.timestamp} tweet={ element } /> }
+    )}
+
     </div>
   )
 }
 
 export default App
+
